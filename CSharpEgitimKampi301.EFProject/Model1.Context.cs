@@ -13,10 +13,10 @@ namespace CSharpEgitimKampi301.EFProject
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EgitimKampiEfTravelDbEntities1 : DbContext
+    public partial class EgitimKampiEfTravelDbEntities2 : DbContext
     {
-        public EgitimKampiEfTravelDbEntities1()
-            : base("name=EgitimKampiEfTravelDbEntities1")
+        public EgitimKampiEfTravelDbEntities2()
+            : base("name=EgitimKampiEfTravelDbEntities2")
         {
         }
     
@@ -25,9 +25,10 @@ namespace CSharpEgitimKampi301.EFProject
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Admin> Admin { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Guide> Guide { get; set; }
         public virtual DbSet<Location> Location { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<TblCustomer> TblCustomer { get; set; }
     }
 }
